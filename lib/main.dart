@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-
 import 'package:provider/provider.dart';
 
 import 'providers/providers.dart' show ThemeProvider;
-import 'screens/screens.dart';
+import 'router/app_routes.dart';
 import 'shared/shared.dart' show Preferences;
 
 void main() async {
@@ -25,11 +24,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Seed',
-      initialRoute: HomeScreen.routeName,
-      routes: {
-        HomeScreen.routeName: (_) => const HomeScreen(),
-        SettingsScreen.routeName: (_) => const SettingsScreen()
-      },
+      initialRoute: AppRoutes.initialRoute,
+
+      // Defined routes
+      routes: AppRoutes.getAppRoutes(),
+
+      // Generator dinamyc routes
+      // onGenerateRoute: AppRoutes.onGenerateRoute,
       theme: Provider.of<ThemeProvider>(context).currentTheme,
     );
   }

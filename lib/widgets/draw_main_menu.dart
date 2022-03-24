@@ -14,7 +14,7 @@ class DrawMainMenu extends StatelessWidget {
           ListTile(
             leading: const Icon(Icons.home),
             title: const Text('Home'),
-            onTap: () => Navigator.pushReplacementNamed(context, HomeScreen.routeName),
+            onTap: () => Navigator.pushReplacementNamed(context, MainScreen.routeName),
           ),
           ListTile(
             leading: const Icon(Icons.settings),
