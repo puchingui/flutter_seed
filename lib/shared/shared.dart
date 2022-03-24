@@ -1,0 +1,1 @@
+export 'package:flutter_seed/shared/preferences.dart';

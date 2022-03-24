@@ -1,0 +1,1 @@
+export 'package:flutter_seed/providers/theme_provider.dart';
