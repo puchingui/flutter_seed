@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_seed/router/app_routes.dart';
 
-class DrawMainMenu extends StatelessWidget {
-  const DrawMainMenu({Key? key}) : super(key: key);
+class MainMenu extends StatelessWidget {
+  const MainMenu({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

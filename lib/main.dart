@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
 
       // Generator dinamyc routes
       // onGenerateRoute: AppRoutes.onGenerateRoute,
-      theme: Provider.of<ThemeProvider>(context).currentTheme,
+      theme: Provider.of<ThemeProvider>(context).currentTheme
     );
   }
 }

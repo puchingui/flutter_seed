@@ -1,21 +1,26 @@
 import 'package:flutter/material.dart';
 
+import 'package:flutter_seed/themes/themes.dart';
+
 class ThemeProvider extends ChangeNotifier {
   ThemeData currentTheme;
 
   // Constructor
   ThemeProvider({required bool isDarkMode})
-      : currentTheme = isDarkMode ? ThemeData.dark() : ThemeData.light();
+      : currentTheme = isDarkMode ? AppTheme.dark : AppTheme.light;
 
-  // Methods
-
-  setDarkTheme() {
-    currentTheme = ThemeData.dark();
+  dark() {
+    currentTheme = AppTheme.dark;
     notifyListeners();
   }
 
-  setLightTheme() {
-    currentTheme = ThemeData.light();
+  light() {
+    currentTheme = AppTheme.light;
+    notifyListeners();
+  }
+
+  indigo() {
+    currentTheme = AppTheme.indigo;
     notifyListeners();
   }
 }

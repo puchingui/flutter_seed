@@ -1,23 +1,19 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 
-import 'package:flutter_seed/models/models.dart';
 import 'package:flutter_seed/shared/shared.dart';
-import 'package:flutter_seed/widgets/widgets.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
 
-  static const String routeName = 'home';
-  static const String routeTitle = 'Home';
+  static const String routeName = 'main';
+  static const String routeTitle = 'Main';
   static const IconData routeIcon = Icons.home;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text('HomeScreen')),
-        drawer: const DrawMainMenu(),
+        appBar: AppBar(title: const Text('MainScreen')),
+        drawer: const MainMenu(),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

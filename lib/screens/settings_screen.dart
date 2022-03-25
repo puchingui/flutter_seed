@@ -4,7 +4,6 @@ import 'package:provider/provider.dart';
 
 import 'package:flutter_seed/providers/providers.dart';
 import 'package:flutter_seed/shared/shared.dart';
-import 'package:flutter_seed/widgets/widgets.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({Key? key}) : super(key: key);
@@ -25,7 +24,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     return Scaffold(
         appBar: AppBar(title: const Text('SettingsScreen')),
         // Main Menu
-        drawer: const DrawMainMenu(),
+        drawer: const MainMenu(),
 
         // Content
         body: Padding(
@@ -45,8 +44,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   onChanged: (value) => setState(() {
                     Preferences.isDarkMode = value;
                     value
-                        ? themeProvider.setDarkTheme()
-                        : themeProvider.setLightTheme();
+                        ? themeProvider.dark()
+                        : themeProvider.light();
                   }),
                 ),
                 const Divider()
