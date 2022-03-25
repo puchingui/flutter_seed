@@ -8,7 +8,6 @@ class AppRoutes {
 
   ///* Add new Menu Option here
   static final menuOptions = <MenuOption>[
-    //TODO: Borrar MainScreen
     MenuOption(
         route: MainScreen.routeName,
         title: MainScreen.routeTitle,

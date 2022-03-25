@@ -10,7 +10,7 @@ class SettingsScreen extends StatefulWidget {
   const SettingsScreen({Key? key}) : super(key: key);
 
   static const String routeName = 'settings';
-  static const String routeTitle = 'SettingsScreen';
+  static const String routeTitle = 'Settings';
   static const IconData routeIcon = Icons.settings;
 
   @override

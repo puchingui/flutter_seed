@@ -1,29 +1,31 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_seed/screens/screens.dart';
+
+import 'package:flutter_seed/router/app_routes.dart';
 
 class DrawMainMenu extends StatelessWidget {
   const DrawMainMenu({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final menuOpts = AppRoutes.menuOptions;
+
     return Drawer(
-      child: ListView(
-        padding: EdgeInsets.zero,
-        children: [
-          const _DrawHeader(),
-          ListTile(
-            leading: const Icon(Icons.home),
-            title: const Text('Home'),
-            onTap: () => Navigator.pushReplacementNamed(context, MainScreen.routeName),
-          ),
-          ListTile(
-            leading: const Icon(Icons.settings),
-            title: const Text('Settings'),
-            onTap: () => Navigator.pushReplacementNamed(context, SettingsScreen.routeName),
-          )
-        ],
-      ),
-    );
+        child: Column(children: [
+      const _DrawHeader(),
+      Expanded(
+        child: ListView.builder(
+          padding: EdgeInsets.zero,
+          itemCount: menuOpts.length,
+          itemBuilder: (_, int idx) {
+            return ListTile(
+                leading: Icon(menuOpts[idx].icon),
+                title: Text(menuOpts[idx].title),
+                onTap: () => Navigator.pushReplacementNamed(
+                    context, menuOpts[idx].route));
+          },
+        ),
+      )
+    ]));
   }
 }
 

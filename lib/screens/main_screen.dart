@@ -10,7 +10,7 @@ class MainScreen extends StatelessWidget {
   const MainScreen({Key? key}) : super(key: key);
 
   static const String routeName = 'home';
-  static const String routeTitle = 'HomeScreen';
+  static const String routeTitle = 'Home';
   static const IconData routeIcon = Icons.home;
 
   @override
