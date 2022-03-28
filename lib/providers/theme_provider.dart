@@ -23,4 +23,9 @@ class ThemeProvider extends ChangeNotifier {
     currentTheme = AppTheme.indigo;
     notifyListeners();
   }
+
+  orange() {
+    currentTheme = AppTheme.orange;
+    notifyListeners();
+  }
 }
